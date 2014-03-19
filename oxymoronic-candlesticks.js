@@ -20,17 +20,10 @@
             backgroundColor = chart.options.chart.backgroundColor || '#ffffff',
             points = series.points,
             options = series.options,
-            type = options.type,
-            defaultOptions = {
-                enable: true,
-                upColor: '#00ff00',
-                downColor: '#ff0000'
-            };
+            isOxy = options.oxymoronic !== undefined ? options.oxymoronic : true,
+            type = options.type;
         
-        options.custom = options.custom || {};
-        options.custom = merge(options.custom, defaultOptions);
-        
-        if (type === 'candlestick' || type === 'ohlc') {
+        if (isOxy && (type === 'candlestick' || type === 'ohlc')) {
         
             each(points, function (point, i) {
                 var open = point.open,
@@ -39,9 +32,8 @@
                     prevClose = !isFirstPoint ? points[i - 1].close : null,
                     graphic = point.graphic,
                     attribute = point.pointAttr,
-                    custom = options.custom,
-                    upColor = custom.upColor,
-                    downColor = custom.downColor,
+                    upColor = options.upColor,
+                    downColor = options.color,
                     isDayUp,
                     isEqual,
                     isCloseUp,
