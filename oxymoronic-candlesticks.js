@@ -1,8 +1,8 @@
 /**
- * Oxymoronic Candlestick
+ * Using this plugin will enable "Oxymoronic" candlesticks.
  *
  * Author: Roland Banguiran
- * Email: rolandsb@phillip.com.sg
+ * Email: banguiran@gmail.com
  */
  
 (function (H) {
