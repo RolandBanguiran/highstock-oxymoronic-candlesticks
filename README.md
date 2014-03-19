@@ -11,3 +11,5 @@ plotOptions: {
     }
 }
 </pre>
+
+Demo: http://www.highcharts.com/plugin-registry/single/29/
