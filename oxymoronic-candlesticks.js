@@ -50,7 +50,7 @@
                 isEqual = close === prevClose;
                 isDayUp = isFirstPoint ? isCloseUp : close > prevClose;
                 
-                strokeColor = !isEqual ? (isDayUp ? upLineColor : color) : prevStrokeColor;
+                strokeColor = !isEqual ? (isDayUp ? upLineColor : lineColor) : prevStrokeColor;
                 fillColor = strokeColor === upLineColor ? (isCloseUp ? backgroundColor : upColor) : (isCloseUp ? backgroundColor : color);
                 
                 // replace default attributes
