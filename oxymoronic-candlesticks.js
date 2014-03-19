@@ -10,17 +10,17 @@
  
 // JSLint options:
 /*global Highcharts*/
- 
+
 (function (H) {
     'use strict';
     var each = H.each,
         merge = H.merge;
 
     H.wrap(H.Series.prototype, 'render', function (proceed) {
-       
+
         // Run the original proceed method
         proceed.apply(this, Array.prototype.slice.call(arguments, 1));
-        
+
         var series = this,
             chart = series.chart,
             backgroundColor = chart.options.chart.backgroundColor || '#ffffff',
@@ -28,9 +28,9 @@
             options = series.options,
             isOxy = options.oxymoronic !== undefined ? options.oxymoronic : true,
             type = options.type;
-        
+
         if (isOxy && (type === 'candlestick' || type === 'ohlc')) {
-        
+
             each(points, function (point, i) {
                 var open = point.open,
                     close = point.close,
@@ -48,14 +48,14 @@
                     strokeColor,
                     fillColor,
                     prevStrokeColor = !isFirstPoint ? points[i - 1].graphic.stroke : null;
-                
+
                 isCloseUp = close > open;
                 isEqual = close === prevClose;
                 isDayUp = isFirstPoint ? isCloseUp : close > prevClose;
-                
+
                 strokeColor = !isEqual ? (isDayUp ? upLineColor : lineColor) : prevStrokeColor;
                 fillColor = strokeColor === upLineColor ? (isCloseUp ? backgroundColor : upColor) : (isCloseUp ? backgroundColor : color);
-                
+
                 // replace default attributes
                 point.pointAttr = merge(attribute, {
                     '': {
@@ -71,11 +71,11 @@
                         fill: fillColor
                     }
                 });
-                
+
                 // update SVG elements color attribute
                 graphic.attr('stroke', strokeColor);
                 graphic.attr('fill', fillColor);
             });
-        }   
+        }
     });
 }(Highcharts));
