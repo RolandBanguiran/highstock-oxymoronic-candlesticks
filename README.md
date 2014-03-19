@@ -13,3 +13,7 @@ plotOptions: {
 </pre>
 
 Demo: http://www.highcharts.com/plugin-registry/single/29/
+
+Donate
+---
+Bitcoin to <code>15dv1MW6LrArfzrzq46mPscjce7vLUfaBR</code>
