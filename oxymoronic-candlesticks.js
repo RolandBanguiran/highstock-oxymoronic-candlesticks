@@ -8,6 +8,9 @@
  * Default: true
  */
  
+// JSLint options:
+/*global Highcharts*/
+ 
 (function (H) {
     'use strict';
     var each = H.each,
