@@ -32,8 +32,10 @@
                     prevClose = !isFirstPoint ? points[i - 1].close : null,
                     graphic = point.graphic,
                     attribute = point.pointAttr,
+                    color = options.color,
+                    lineColor = options.lineColor,
                     upColor = options.upColor,
-                    downColor = options.color,
+                    upLineColor = options.upLineColor,
                     isDayUp,
                     isEqual,
                     isCloseUp,
@@ -45,8 +47,8 @@
                 isEqual = close === prevClose;
                 isDayUp = isFirstPoint ? isCloseUp : close > prevClose;
                 
-                strokeColor = !isEqual ? (isDayUp ? upColor : downColor) : prevStrokeColor;
-                fillColor = strokeColor === upColor ? (isCloseUp ? backgroundColor : strokeColor) : (isCloseUp ? backgroundColor : strokeColor);
+                strokeColor = !isEqual ? (isDayUp ? upLineColor : color) : prevStrokeColor;
+                fillColor = strokeColor === upLineColor ? (isCloseUp ? backgroundColor : upColor) : (isCloseUp ? backgroundColor : color);
                 
                 // replace default attributes
                 point.pointAttr = merge(attribute, {
