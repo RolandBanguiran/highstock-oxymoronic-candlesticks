@@ -3,6 +3,9 @@
  *
  * Author: Roland Banguiran
  * Email: banguiran@gmail.com
+ *
+ * Usage: Set oxymoronic:false in the candlestick plotOptions to disable.
+ * Default: true
  */
  
 (function (H) {
