@@ -1,5 +1,5 @@
 {
-    "name": "Oxymoronic Candlesticks",
+    "name": "\"Oxymoronic\" Candlesticks",
     "version": "1.0.0",
     "title": "Highstocks Oxymoronic Candlesticks",
     "demo": [
@@ -15,7 +15,7 @@
             "url": "https://github.com/RolandBanguiran/highstock-oxymoronic-candlesticks/blob/master/LICENSE"
         }
     ],
-    "description": "Using this plugin will enable "Oxymoronic" candlesticks. Candles that are colored bullishly, but filled bearishly (i.e., a filled, green candle) or vice versa (i.e., a hollow red candle).",
+    "description": "Using this plugin will enable \"Oxymoronic\" candlesticks. Candles that are colored bullishly, but filled bearishly (i.e., a filled, green candle) or vice versa (i.e., a hollow red candle).",
     "keywords": [
      "oxymoronic",
      "candlestick"
