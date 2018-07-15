@@ -10,4 +10,4 @@ plotOptions: {
 }
 ```
 # Demo
-http://www.highcharts.com/plugin-registry/single/29/
+https://www.highcharts.com/products/plugin-registry/single/29/%22Oxymoronic%22%20Candlesticks
